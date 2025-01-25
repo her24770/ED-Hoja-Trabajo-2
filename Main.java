@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<ArrayList<String>> profixExpresions = leerTxt();
-
+        //prueba funcionamiento
         for (ArrayList<String> line : profixExpresions) {
             System.out.println(line);
         }
@@ -19,13 +19,13 @@ public class Main {
             String line;
 
             while ((line = br.readLine()) != null) {
-                ArrayList<String> charOperation = new ArrayList<>();
+                ArrayList<String> prefixOperation = new ArrayList<>();
                 for (char str : line.toCharArray()) {
                     if (str != ' ') {
-                        charOperation.add(String.valueOf(str));
+                        prefixOperation.add(String.valueOf(str));
                     }
                 }
-                documentLines.add(charOperation);
+                documentLines.add(prefixOperation);
             }
         } catch (IOException e) {
             System.out.println("Error en lectura del documento: " + e.getMessage());

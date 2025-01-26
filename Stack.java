@@ -1,21 +1,20 @@
-public class Stack implements IStack {
-    private Node lastnode;
-    private Node firstNode;
+public class Stack<T> implements IStack<T> {
+    
+    private Node<T> first;
+    private Node<T> last;
+    
 
     @Override
-    public int pop(){
-        return 0;
-    }
+    public void push (T value) {
 
-    @Override
-    public void push(int value){
         
     }
 
     @Override
-    public int operation(char operator, int value1, int value2){
-        return 0;
+    public T pop() {
+        
+        return null;
+        
     }
-
 
 }

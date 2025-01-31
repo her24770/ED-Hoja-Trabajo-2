@@ -22,11 +22,6 @@ public class ADTCalculator {
             System.out.println("Error en lectura del documento: " + e.getMessage());
         }
 
-        // Mostrar el resultado
-        for (ArrayList<String> line : documentLines) {
-            System.out.println(line);
-        }
-
         //
         Stack<Integer> stack = new Stack<>();
         for (ArrayList<String> line : documentLines) {

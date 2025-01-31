@@ -36,10 +36,18 @@ public class ADTCalculator {
                 }
             }
 
+
             System.out.println("\nOperación:" + line);
 
-            System.out.println("Resultado: " + stack.pop());
+            
+            if (stack.getFirst() != stack.getLast()) {
 
+                System.out.println("Error de Sintaxis");
+
+            } else {
+
+                System.out.println("Resultado: " + stack.pop());
+            }
         }
 
     }

@@ -3,6 +3,21 @@ public class Stack<T> implements IStack<T> {
     private Node<T> first;
     private Node<T> last;
 
+    public void setFirst(Node<T> first) {
+        this.first = first;
+    }
+    
+    public Node<T> getFirst() {
+        return first;
+    }
+
+    public void setLast(Node<T> last) {
+        this.last = last;
+    }
+
+    public Node<T> getLast() {
+        return last;
+    }
 
     @Override
     public void push (T value) {   

@@ -2,10 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ADTCalculator {
     public void calculate(String file) {
-        Stack<Integer> stack = new Stack<>();
+        
         
         ArrayList<ArrayList<String>> documentLines = new ArrayList<>();
 
@@ -13,27 +14,25 @@ public class ADTCalculator {
             String line;
 
             while ((line = br.readLine()) != null) {
-                ArrayList<String> prefixOperation = new ArrayList<>();
-                for (char str : line.toCharArray()) {
-                    if (str != ' ') {
-                        prefixOperation.add(String.valueOf(str));
-                    }
-                }
+                // Separar palabras por espacios
+                ArrayList<String> prefixOperation = new ArrayList<>(Arrays.asList(line.split(" ")));
                 documentLines.add(prefixOperation);
             }
         } catch (IOException e) {
             System.out.println("Error en lectura del documento: " + e.getMessage());
         }
 
+        //
+        Stack<Double> stack = new Stack<>();
         for (ArrayList<String> line : documentLines) {
 
             for (String str : line) {
                 if (str.equals("+") || str.equals("-") || str.equals("*") || str.equals("/") || str.equals("%")) {
-                    int value2 = stack.pop();
-                    int value1 = stack.pop();
+                    double value2 = stack.pop();
+                    double value1 = stack.pop();
                     stack.push(stack.operation(str.charAt(0), value1, value2));
                 } else {
-                    stack.push(Integer.parseInt(str));
+                    stack.push(Double.parseDouble(str));
                 }
             }
 

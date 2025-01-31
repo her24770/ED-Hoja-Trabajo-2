@@ -23,16 +23,16 @@ public class ADTCalculator {
         }
 
         //
-        Stack<Integer> stack = new Stack<>();
+        Stack<Double> stack = new Stack<>();
         for (ArrayList<String> line : documentLines) {
 
             for (String str : line) {
                 if (str.equals("+") || str.equals("-") || str.equals("*") || str.equals("/") || str.equals("%")) {
-                    int value2 = stack.pop();
-                    int value1 = stack.pop();
+                    double value2 = stack.pop();
+                    double value1 = stack.pop();
                     stack.push(stack.operation(str.charAt(0), value1, value2));
                 } else {
-                    stack.push(Integer.parseInt(str));
+                    stack.push(Double.parseDouble(str));
                 }
             }
 

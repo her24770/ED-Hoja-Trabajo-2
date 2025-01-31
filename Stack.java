@@ -38,15 +38,15 @@ public class Stack<T> implements IStack<T> {
     public T operation(char operator, T value1, T value2) {
         switch (operator) {
             case '+':
-                return (T) (Integer) ((Integer) value1 + (Integer) value2);
+                return (T) (Double) ((Double) value1 + (Double) value2);
             case '-':
-                return (T) (Integer) ((Integer) value1 - (Integer) value2);
+                return (T) (Double) ((Double) value1 - (Double) value2);
             case '*':   
-                return (T) (Integer) ((Integer) value1 * (Integer) value2);
+                return (T) (Double) ((Double) value1 * (Double) value2);
             case '/':
-                return (T) (Integer) ((Integer) value1 / (Integer) value2);
+                return (T) (Double) ((Double) value1 / (Double) value2);
             case '%':       
-                return (T) (Integer) ((Integer) value1 % (Integer) value2);
+                return (T) (Double) ((Double) value1 % (Double) value2);
             default:
                 return null;
         

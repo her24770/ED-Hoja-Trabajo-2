@@ -1,8 +1,10 @@
 public class Stack<T> implements IStack<T> {
-    
-    private Node<T> first;
-    private Node<T> last;
 
+    
+    private Node<T> first; // Primer nodo de la pila
+    private Node<T> last;  // Último nodo de la pila
+
+    
     public void setFirst(Node<T> first) {
         this.first = first;
     }
@@ -19,6 +21,12 @@ public class Stack<T> implements IStack<T> {
         return last;
     }
 
+    
+    /**
+     * Método que agrega un valor a la pila
+     * @param value Valor a agregar
+     */
+
     @Override
     public void push (T value) {   
         Node<T> newNode = new Node<>(value);
@@ -32,6 +40,11 @@ public class Stack<T> implements IStack<T> {
         }    
 
     }
+
+    /**
+     * Método que elimina el último valor de la pila
+     * @return Valor eliminado
+     */
 
     @Override
     public T pop() {
@@ -48,6 +61,14 @@ public class Stack<T> implements IStack<T> {
             return value;
         }    
     }
+
+    /**
+     * Método que realiza una operación entre dos valores
+     * @param operator Operador de la operación
+     * @param value1 Primer valor
+     * @param value2 Segundo valor
+     * @return Resultado de la operación
+     */
 
     @Override
     public T operation(char operator, T value1, T value2) {

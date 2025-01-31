@@ -5,6 +5,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ADTCalculator {
+
+
+    /**
+     * Método que realiza el cálculo de las operaciones en el archivo
+     * @param file Nombre del archivo
+     */
+    
     public void calculate(String file) {
         
         
@@ -22,7 +29,7 @@ public class ADTCalculator {
             System.out.println("Error en lectura del documento: " + e.getMessage());
         }
 
-        //
+
         Stack<Double> stack = new Stack<>();
         for (ArrayList<String> line : documentLines) {
 
@@ -35,7 +42,6 @@ public class ADTCalculator {
                     stack.push(Double.parseDouble(str));
                 }
             }
-
 
             System.out.println("\nOperación:" + line);
 

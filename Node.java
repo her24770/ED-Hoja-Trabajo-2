@@ -1,8 +1,16 @@
 public class Node<T> {
 
-    private T value;
-    private Node<T> next;
-    private Node<T> previous;
+
+
+
+    private T value; // Valor del nodo
+    private Node<T> next; 
+    private Node<T> previous; 
+
+    /**
+     * Constructor de la clase Node
+     * @param value Valor del nodo
+     */
 
     public Node(T value) {
         this.value = value;

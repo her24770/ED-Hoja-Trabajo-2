@@ -5,11 +5,32 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
+        Stack<Integer> stack = new Stack<>();
+        
         ArrayList<ArrayList<String>> profixExpresions = leerTxt();
         //prueba funcionamiento
         for (ArrayList<String> line : profixExpresions) {
-            System.out.println(line);
+
+            for (String str : line) {
+                if (str.equals("+") || str.equals("-") || str.equals("*") || str.equals("/") || str.equals("%")) {
+                    int value2 = stack.pop();
+                    int value1 = stack.pop();
+                    stack.push(stack.operation(str.charAt(0), value1, value2));
+                } else {
+                    stack.push(Integer.parseInt(str));
+                }
+            }
+
+            System.out.println("\nOperación:" + line);
+
+            System.out.println("Resultado: " + stack.pop());
+
         }
+
+
+
+
     }
 
     public static ArrayList<ArrayList<String>> leerTxt() {

@@ -1,3 +1,6 @@
+/**
+ * Representación de punteros del stack
+ */
 public class Node<T> {
 
 

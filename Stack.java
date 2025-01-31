@@ -1,3 +1,6 @@
+/**
+ * ADT de pila (last in first out) generica
+ */
 public class Stack<T> implements IStack<T> {
 
     

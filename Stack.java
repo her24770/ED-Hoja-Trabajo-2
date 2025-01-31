@@ -53,5 +53,8 @@ public class Stack<T> implements IStack<T> {
         }
     }
     
+    public Node<T> getLast(){
+        return this.last;
+    }
 
 }

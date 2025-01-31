@@ -9,7 +9,7 @@ public class ADTCalculator {
         
         ArrayList<ArrayList<String>> documentLines = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("datos.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
 
             while ((line = br.readLine()) != null) {

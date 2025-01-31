@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 
 /**
- * 
+ * Pruebas unitarias para la pila y las operaciones realizables en la calculadora
  */
 public class StackTest {
     private Stack stack;
